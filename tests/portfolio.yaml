@@ -1,0 +1,37 @@
+url: http://localhost:4321
+---
+- launchApp
+- assertVisible: "Senior React Native Developer"
+- tapOn: "Work"
+- assertVisible: "Ecoloop Partner"
+- scrollUntilVisible:
+    element: "What I contributed.*"
+    direction: DOWN
+- tapOn:
+    text: "What I contributed.*"
+    index: 0
+- scrollUntilVisible:
+    element: "View on Google Play.*"
+    direction: DOWN
+- assertVisible: "View on Google Play.*"
+- scrollUntilVisible:
+    element: "03 / ABBA"
+    direction: DOWN
+- assertVisible: "Scheduling system"
+- scrollUntilVisible:
+    element: "What I contributed.*"
+    direction: DOWN
+- scrollUntilVisible:
+    element: "Recent experience"
+    direction: DOWN
+- scrollUntilVisible:
+    element: "Hyperscal"
+    direction: DOWN
+- assertVisible: "Hyperscal"
+- scrollUntilVisible:
+    element: "Say hello.*"
+    direction: DOWN
+- scrollUntilVisible:
+    element: "andi.rayka@gmail.com.*"
+    direction: DOWN
+- assertVisible: "andi.rayka@gmail.com.*"

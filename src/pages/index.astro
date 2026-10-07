@@ -1,0 +1,118 @@
+---
+import { Image } from 'astro:assets';
+import '../styles/global.css';
+import { capabilities, cvUrl, experience } from '../content';
+import ecoloop from '../assets/ecoloop.png';
+import mabaat from '../assets/mabaat.jpeg';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Andi Rayka, Senior React Native Developer based in Indonesia. Selected work in mobile delivery, performance, and scheduling systems." />
+    <meta name="theme-color" content="#faf7f2" />
+    <meta property="og:title" content="Andi Rayka · Senior React Native Developer" />
+    <meta property="og:description" content="Mobile apps, thoughtfully built. Selected projects, experience, and the work behind them." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} type="image/svg+xml" />
+    <title>Andi Rayka · Senior React Native Developer</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a href="#top" class="wordmark" aria-label="ar. Andi Rayka, back to top">ar<span>.</span></a>
+      <nav aria-label="Main navigation" class="flex items-center gap-5 sm:gap-9">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cv" href={cvUrl}>View CV <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero wrap" id="top" aria-labelledby="intro-title">
+        <div class="hero-topline"><span class="eyebrow">Senior React Native Developer</span><span class="location">Based in Indonesia <span aria-hidden="true">↗</span></span></div>
+        <div class="hero-title-row">
+          <h1 id="intro-title">Andi Rayka<span class="name-dot">.</span></h1>
+          <div class="orbit" aria-hidden="true"><div class="orbit-ring"></div><div class="orbit-ring second"></div><div class="orbit-center">✳</div></div>
+        </div>
+        <div class="hero-bottom">
+          <h2>Mobile apps.<br /><span>Thoughtfully built.</span></h2>
+          <div class="hero-description">
+            <p>I turn complex workflows into apps people can use with confidence. Seven years of building, shipping, and improving mobile experiences.</p>
+            <a class="button button-dark" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
+          </div>
+        </div>
+        <div class="hero-foot"><span>React Native <span aria-hidden="true">/</span> Expo <span aria-hidden="true">/</span> TypeScript</span><span>From first build to production</span></div>
+      </section>
+
+      <section class="work wrap section-space" id="work" aria-labelledby="work-title">
+        <div class="section-heading"><div><p class="eyebrow">01 / Selected work</p><h2 id="work-title">A few things I've built<span>.</span></h2></div><p>Different problems.<br />Considered solutions.</p></div>
+
+        <article id="ecoloop" class="project project-ecoloop">
+          <div class="project-art ecoloop-art">
+            <div class="art-topline"><span>01 / Ecoloop Partner</span><span>Mobile</span></div>
+            <div class="brand-disc"><Image src={ecoloop} alt="Ecoloop brand mark" width={104} height={104} format="webp" loading="lazy" /></div>
+            <div class="art-caption"><span>From zero<br />to Google Play.</span><span aria-hidden="true">↗</span></div>
+          </div>
+          <div class="project-copy">
+            <p class="eyebrow">React Native · End-to-end delivery</p>
+            <h3>Ecoloop Partner</h3>
+            <p>A waste-management app built from the ground up. I owned the interface, application logic, API integration, and Google Play release.</p>
+            <div class="project-result"><span class="result-label">The outcome</span><strong>A production app, from first build to launch.</strong></div>
+            <details><summary>What I contributed <span aria-hidden="true">+</span></summary><div class="detail-body"><p>I translated the product requirements into a React Native application, connected the UI to REST APIs, and handled the Android release.</p><p class="tech-line">React Native / TypeScript / Redux / REST APIs</p><a class="text-link" href="https://play.google.com/store/apps/details?id=com.ecoloop_rn">View on Google Play <span aria-hidden="true">↗</span></a></div></details>
+          </div>
+        </article>
+
+        <article id="mabaat" class="project project-mabaat">
+          <div class="project-art mabaat-art">
+            <div class="art-topline"><span>02 / Mabaat</span><span>Mobile</span></div>
+            <Image class="mabaat-logo" src={mabaat} alt="Mabaat logo" width={200} height={200} fit="contain" format="webp" loading="lazy" />
+            <div class="art-caption"><span>Less waiting.<br />More exploring.</span><span aria-hidden="true">↗</span></div>
+          </div>
+          <div class="project-copy">
+            <p class="eyebrow">React Native · Features & performance</p>
+            <h3>Mabaat</h3>
+            <p>Hotel-booking flows that connect discovery to checkout. I delivered map-based property discovery, date selection, cart, ordering, and settings.</p>
+            <div class="project-result"><span class="result-label">The approach</span><strong>Reuse fetched data. Render what matters first.</strong></div>
+            <details><summary>What I contributed <span aria-hidden="true">+</span></summary><div class="detail-body"><p>I built features from Figma designs and used Redux Toolkit caching to avoid unnecessary network requests. Progressive rendering prioritized above-the-fold content on heavier screens.</p><p class="tech-line">React Native / Redux Toolkit / Caching / Progressive rendering</p></div></details>
+          </div>
+        </article>
+
+        <article id="abba" class="project project-abba">
+          <div class="project-art abba-art">
+            <div class="art-topline"><span>03 / ABBA</span><span>Scheduling system</span></div>
+            <div class="metric-art"><span class="before-time">~7 min</span><span class="metric-arrow" aria-hidden="true">↓</span><strong>~20 sec<span>.</span></strong><span>Manual routing time per booking</span></div>
+            <div class="art-caption"><span>Less admin.<br />Better assignment.</span><span aria-hidden="true">↗</span></div>
+          </div>
+          <div class="project-copy">
+            <p class="eyebrow">Frontend engineering · Team leadership</p>
+            <h3>ABBA</h3>
+            <p>A scheduling system for cleaner assignment. As the founding frontend developer, I led a team of three developers and built location-based assignment workflows.</p>
+            <div class="project-result"><span class="result-label">The outcome</span><strong>Routing reduced from minutes to seconds.</strong></div>
+            <details><summary>What I contributed <span aria-hidden="true">+</span></summary><div class="detail-body"><p>Geolocation-based assignment reduced manual routing from approximately seven minutes to twenty seconds per booking. Automated conflict detection and worker time-blocking prevented overlapping allocations.</p><p class="tech-line">Next.js / Tamagui / tRPC / Hono</p></div></details>
+          </div>
+        </article>
+        <p class="work-note">Selected contributions, not the whole story. <a class="text-link" href={cvUrl}>See my full CV <span aria-hidden="true">↗</span></a></p>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="wrap section-space">
+          <div class="about-intro"><div><p class="eyebrow">02 / A little about me</p><h2 id="about-title">I care about how<br />it <em>works.</em></h2></div><div><p class="about-lead">The first release is only the beginning.</p><p>I enjoy the work behind a dependable app: making data available offline, reducing unnecessary requests, testing real workflows, and helping a small team ship together.</p><p>Based in Indonesia, I've worked across hospitality, field operations, fintech, and government. My focus is React Native, with web experience when the problem calls for it.</p></div></div>
+          <div class="capabilities">{capabilities.map((item, index) => <div><span class="capability-number">0{index + 1}</span><h3>{item.title}</h3><p>{item.detail}</p></div>)}</div>
+          <div class="experience-heading"><h3>Recent experience</h3><a class="text-link" href={cvUrl}>The full timeline <span aria-hidden="true">↗</span></a></div>
+          <ol class="experience-list">{experience.map((item) => <li><div><h4>{item.company}</h4><p>{item.role}</p></div><p class="experience-detail">{item.detail}</p><span class="experience-date">{item.date}</span></li>)}</ol>
+          <p class="earlier-work">Earlier work includes Ecoloop Partner, Maideasy, Nusapay, PT Azimuth Solusi, Badr Interactive, NodPay, LesinAja at KomputerKit, and PT Integra Teknologi Solusi.</p>
+        </div>
+      </section>
+
+      <section class="contact wrap section-space" id="contact" aria-labelledby="contact-title">
+        <p class="eyebrow">03 / Let's talk</p>
+        <div class="contact-row"><h2 id="contact-title">Have a role<br />in mind<span>?</span></h2><div><p>If you're looking for a senior React Native developer who cares about the details, I'd like to hear from you.</p><a class="button button-orange" href="mailto:andi.rayka@gmail.com">Say hello <span aria-hidden="true">↗</span></a></div></div>
+        <a class="email-link" href="mailto:andi.rayka@gmail.com">andi.rayka@gmail.com <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+    <footer class="wrap site-footer"><p>© {new Date().getFullYear()} Andi Rayka</p><nav aria-label="Social links"><a href="https://github.com/andirayka">GitHub ↗</a><a href="https://www.linkedin.com/in/andirayka/">LinkedIn ↗</a><a href={cvUrl}>CV ↗</a></nav><a href="#top">Back to top ↑</a></footer>
+  </body>
+</html>
