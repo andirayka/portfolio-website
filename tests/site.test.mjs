@@ -15,6 +15,10 @@ test('introduces the correct person and provides working internal navigation', (
   }
 });
 
+test('shows the location without a trailing arrow', () => {
+  assert.equal($('.hero-topline .location').text().trim(), 'Based in Indonesia');
+});
+
 test('ABBA is a scheduling-system story, never a mobile-app claim', () => {
   const story = $('#abba');
   assert.equal(story.length, 1);
